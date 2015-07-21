@@ -1,0 +1,16 @@
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\bin\Debug\OfficeRemoteService.exe.config
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\bin\Debug\OfficeRemoteService.exe
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\bin\Debug\OfficeRemoteService.pdb
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\obj\Debug\OfficeRemoteService.MainForm.resources
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\obj\Debug\OfficeRemoteService.Properties.Resources.resources
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\obj\Debug\OfficeRemoteService.csproj.GenerateResource.Cache
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\obj\Debug\OfficeRemoteService.exe
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\obj\Debug\OfficeRemoteService.pdb
+D:\Github\OfficeRemoteService\bin\Debug\OfficeRemoteService.exe.config
+D:\Github\OfficeRemoteService\bin\Debug\OfficeRemoteService.exe
+D:\Github\OfficeRemoteService\bin\Debug\OfficeRemoteService.pdb
+D:\Github\OfficeRemoteService\obj\Debug\OfficeRemoteService.MainForm.resources
+D:\Github\OfficeRemoteService\obj\Debug\OfficeRemoteService.Properties.Resources.resources
+D:\Github\OfficeRemoteService\obj\Debug\OfficeRemoteService.csproj.GenerateResource.Cache
+D:\Github\OfficeRemoteService\obj\Debug\OfficeRemoteService.exe
+D:\Github\OfficeRemoteService\obj\Debug\OfficeRemoteService.pdb

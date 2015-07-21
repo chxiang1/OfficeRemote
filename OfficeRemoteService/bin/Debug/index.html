@@ -1,0 +1,516 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Office Remote</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="Content/jquery.mobile-1.4.0.css" />
+    <link rel="shortcut icon" href="/images/Office.ico" type="image/x-icon"/>
+
+    <script src="Scripts/jquery-1.8.2.min.js"></script>
+    <script src="Scripts/hammer-1.0.6.js"></script>
+    <!--<script src="Scripts/jquery.specialevent.hammer.js"></script>-->
+    <script src="Scripts/jquery.mobile-1.4.0.min.js"></script>
+    <style>
+        #swipeme {
+            text-align: center;
+            /*border: 2px dashed gray;
+            line-height: 500px;
+            height: 100%;
+            font-size: 2em;
+            width: 100%;*/
+        }
+        #touchme {
+            text-align: center;
+        }
+
+        .fileinput-button {
+            position: relative;
+            overflow: hidden;
+            float: left;
+            margin-right: 4px;
+        }
+
+        .fileinput-button input {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            transform: translate(-300px, 0) scale(4);
+            font-size: 23px;
+            direction: ltr;
+            cursor: pointer;
+        }
+
+        .glowBtn {
+            color: red;
+            font-weight: bold;
+        }
+
+        body {
+            -webkit-user-select: none; /* Chrome/Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+ */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mainPage" data-role="page" >
+
+        <div data-role="header" data-theme="b" style="background-color: #FF3C00; border: 0px">
+            <a href="" style="top: 4px; background-color: transparent; border:0px" class="ui-btn btnHome"><img src="images/office_logo.png" /></a>
+            <h1>Remote</h1>
+            <span id="btnStart" class="ui-btn ui-corner-all fileinput-button" style="position: absolute; top:-2px; right:2px; background-color:transparent; border:0px">
+                <span id="spStart">Start</span>
+            </span>
+        </div>
+
+        <div id="touchme" data-role="content">
+            <span style="vertical-align: middle; color: gray"><h1>Drag here</h1></span>
+            
+            <span id="btnBack" class="ui-btn ui-corner-all fileinput-button" style="position: absolute; top: 36px; left: -10px; background-color: transparent; border: 0px">
+                <img src="images/back.png" width="80" style="opacity: 0.4; filter: alpha(opacity=40);" />
+            </span>
+            <span id="btnForward" class="ui-btn ui-corner-all fileinput-button" style="position:absolute; top:36px; right:-10px; background-color:transparent; border:0px">
+                <img src="images/forward.png" width="80" style="opacity: 0.4; filter: alpha(opacity=40);" />
+            </span>
+
+            <span id="btnRightClick" class="ui-btn ui-corner-all fileinput-button" style="position:absolute; bottom:36px; right:-10px; background-color:transparent; border:0px">
+                <img src="images/right_click.png" width="80" style="opacity: 0.4; filter: alpha(opacity=40);" />
+            </span>
+        </div>
+
+        <div data-role="footer" style="text-align:center">
+            <!--<a href="#controlPage" style="top: 0px;" data-transition="fade" class="ui-btn">Slideshow</a>-->
+
+            <span id="btnPlay" class="ui-btn ui-corner-all fileinput-button" style="float: left; background-color: transparent; border: 0px">
+                <span id="spSlideShow">Play</span>
+            </span>
+            <span class="ui-btn ui-icon-plus ui-btn-icon-left fileinput-button" style="float: none; bottom: 2px">
+                <span>Photo</span>
+                <input id="image-picker" type="file" accept="image/*" data-role="none" />
+            </span>
+            <span id="btnLaser" state="off" class="ui-btn ui-corner-all fileinput-button" style="float: right; background-color:transparent; border:0px">
+                <span id="spLaser">Laser</span>
+            </span>
+        </div>
+
+    </div>
+
+    <div id="controlPage" data-role="page">
+
+        <div data-role="header" data-theme="b" style="background-color: #1E82CC; border: 0px">
+            <a href="" style="top:4px; background-color: transparent; border:0px" class="ui-btn btnHome"><img src="images/office_logo.png" /></a>
+            <h1>Slideshow</h1>
+        </div>
+
+        <div id="swipeme" data-role="content">
+            <span style="vertical-align:middle; color:gray"><h1>Swipe here</h1></span>
+        </div>
+
+        <div data-role="footer" data-theme="a" style="text-align:center;">
+            <!--<span class="ui-btn ui-corner-all fileinput-button">-->
+            <a href="#mainPage" style="top:0px;" data-transition="fade" class="ui-btn">Trackpad</a>
+            <!--</span>-->
+        </div>
+
+    </div>
+
+    <div id="myDialog" data-role="page" data-dialog="true">
+        <div data-role="header" data-theme="b">
+		<h1>Welcome</h1>
+		</div>
+
+		<div role="main" class="ui-content">
+		<h1>Office Remote <br /> Ver 0.0.1</h1>
+		<p>This App is for MODC 2013-2014 Hack Day demo only. Designed by Chao Xiang and Jianming Zhao. <br /><br />Where shall we start?</p>
+			<a href="#mainPage" data-transition="fade" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Slideshow</a>
+			<a href="#controlPage" data-transition="fade" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Trackpad</a>
+		</div>
+	</div>
+
+    <div id="popup" data-role="popup" class="ui-content" style="background-color:white; display:none">
+        Done.
+    </div>
+    
+    <script>
+        (function ($) {
+
+            //var firstTime = 1;
+            //if (firstTime == 1) {
+            //    setTimeout(function () { $.mobile.changePage("#myDialog", { transition: 'pop' }); }, 10);
+            //    firstTime = 0;
+            //}
+
+            $("#image-picker").change(function (event) {
+                var files = event.target.files;
+                if (files.length > 0) {
+                    var filename = event.target.files[0];
+                    var fr = new FileReader();
+                    fr.onload = function imageHandler(e) {
+                        $.mobile.loading("show", {
+                            text: "Uploading image",
+                            textVisible: "true"
+                        });
+
+                        $.ajax({
+                            type: "POST",
+                            url: "Handlers/OfficeRemoteProxy.ashx?type=upload",
+                            data: e.target.result
+                        }).done(function () {
+                            $.mobile.loading("hide");
+                            $("#popup").popup();
+                            $("#popup").popup('open');
+                            setTimeout(function () { $("#popup").popup('close'); }, 800);
+                        });
+                    };
+                    fr.readAsDataURL(filename);
+
+                }
+            });
+
+            $(".btnHome").click(function (e) {
+                e.stopImmediatePropagation();
+                e.preventDefault();
+
+                $.mobile.changePage("#myDialog", { transition: 'pop' });
+            });
+
+            var the_height = ($(window).height() - $("#mainPage").find('[data-role="header"]').height() - $("#mainPage").find('[data-role="footer"]').height() - 121);
+            $("#mainPage").height($(window).height()).find('[data-role="content"]').height(the_height);
+            $("#swipeme").css("line-height", (the_height - 46) + "px");
+            $("#touchme").css("line-height", (the_height - 43) + "px");
+
+            document.ontouchmove = function (event) {
+                event.preventDefault();
+            }
+
+            var sm = document.getElementById('swipeme'),
+                tm = document.getElementById('touchme'),
+                bk = document.getElementById('btnBack'),
+                fw = document.getElementById('btnForward'),
+                rb = document.getElementById('btnRightClick'),
+                bp = document.getElementById('btnPlay'),
+                bl = document.getElementById('btnLaser'),
+                bs = document.getElementById('btnStart');
+
+            Hammer(bp).on('tap', function (event) {
+                event.stopImmediatePropagation();
+                event.gesture.preventDefault();
+
+                var eventType = 'run';
+                if ($("#spSlideShow").text() == "Play") {
+                    eventType = 'run';
+                    $("#spSlideShow").text("Stop");
+                } else {
+                    eventType = 'stop';
+                    $("#spSlideShow").text("Play");
+                }
+
+                $.ajax({
+                    url: "Handlers/OfficeRemoteProxy.ashx",
+                    data: {
+                        type: eventType,
+                        offset_x: 0,
+                        offset_y: 0
+                    }
+                });
+            });
+
+            Hammer(bs).on('tap', function (event) {
+                event.stopImmediatePropagation();
+                event.gesture.preventDefault();
+
+                $.ajax({
+                    url: "Handlers/OfficeRemoteProxy.ashx",
+                    data: {
+                        type: "win",
+                        offset_x: 0,
+                        offset_y: 0
+                    }
+                });
+            });
+
+            Hammer(bl).on('tap', function (event) {
+                event.stopImmediatePropagation();
+                event.gesture.preventDefault();
+
+                var eventType = 'laseron';
+                if ($("#spLaser").attr("state") == "off") {
+                    eventType = 'laseron';
+                    $("#spLaser").attr("state", "on");
+                    $("#spLaser").addClass("glowBtn");
+                } else {
+                    eventType = 'laseroff';
+                    $("#spLaser").attr("state", "off");
+                    $("#spLaser").removeClass("glowBtn");
+                }
+            });
+
+            var prevDistanceX = 0;
+            var prevDistanceY = 0;
+
+            Hammer(sm).on('swipe', function (event) {
+                // slideshow control
+                event.gesture.preventDefault();
+
+                var myType = event.type;
+
+                $.ajax({
+                    url: "Handlers/OfficeRemoteProxy.ashx",
+                    data: {
+                        type: myType,
+                        direction: event.gesture.direction,
+                        offset_x: 0,
+                        offset_y: 0
+                    }
+                });
+
+                console.log("Type: " + event.type + ", Direction: " + event.direction);
+            });
+
+            Hammer(sm).on('pinchin', function (event) {
+                event.gesture.preventDefault();
+                $.ajax({
+                    url: "Handlers/OfficeRemoteProxy.ashx",
+                    data: {
+                        type: 'pinchin',
+                        direction: event.gesture.direction,
+                        offset_x: 0,
+                        offset_y: 0
+                    }
+                });
+            });
+
+            Hammer(sm).on('pinchout', function (event) {
+                event.gesture.preventDefault();
+                $.ajax({
+                    url: "Handlers/OfficeRemoteProxy.ashx",
+                    data: {
+                        type: 'pinchout',
+                        direction: event.gesture.direction,
+                        offset_x: 0,
+                        offset_y: 0
+                    }
+                });
+            });
+
+            Hammer(tm, { drag_max_touches: 3 }).on('drag', function (event) {
+                // mouse control
+                event.gesture.preventDefault();
+
+                var offsetX = (event.gesture.deltaX - prevDistanceX) * 3;
+                var offsetY = (event.gesture.deltaY - prevDistanceY) * 3;
+
+                if (event.gesture.touches.length == 1) {
+                    $.ajax({
+                        url: "Handlers/OfficeRemoteProxy.ashx",
+                        data: {
+                            type: event.type,
+                            direction: event.gesture.direction,
+                            offset_x: offsetX,
+                            offset_y: offsetY
+                        }
+                    });
+                }
+
+                console.log("Type: " + event.type + ", Direction: " + event.gesture.direction + ", Offset: " + offsetX + "," + offsetY + ",touches: " + event.gesture.touches.length);
+                console.log(event);
+
+                prevDistanceX = event.gesture.deltaX;
+                prevDistanceY = event.gesture.deltaY;
+            });
+
+            Hammer(tm, { drag_max_touches: 3 }).on('dragup', function (event) {
+                // scroll up control
+                event.gesture.preventDefault();
+
+                if (event.gesture.touches.length == 2) {
+                    $.ajax({
+                        url: "Handlers/OfficeRemoteProxy.ashx",
+                        data: {
+                            type: "scroll",
+                            direction: event.gesture.direction,
+                            offset_x: 0,
+                            offset_y: event.gesture.distance
+                        }
+                    });
+                }
+            });
+
+            Hammer(tm, { drag_max_touches: 3 }).on('dragdown', function (event) {
+                // scroll down control
+                event.gesture.preventDefault();
+
+                if (event.gesture.touches.length == 2) {
+                    $.ajax({
+                        url: "Handlers/OfficeRemoteProxy.ashx",
+                        data: {
+                            type: "scroll",
+                            direction: event.gesture.direction,
+                            offset_x: 0,
+                            offset_y: -event.gesture.distance
+                        }
+                    });
+                }
+            });
+
+            Hammer(tm, { drag_max_touches: 3 }).on('dragleft', function (event) {
+                // scroll left control
+                event.gesture.preventDefault();
+
+                if (event.gesture.touches.length == 2) {
+                    $.ajax({
+                        url: "Handlers/OfficeRemoteProxy.ashx",
+                        data: {
+                            type: "Hscroll",
+                            /*touches: event.touches.length,*/
+                            direction: event.gesture.direction,
+                            offset_x: -event.gesture.distance * 3,
+                            offset_y: 0
+                        }
+                    });
+                }
+            });
+
+            Hammer(tm, { drag_max_touches: 3 }).on('dragright', function (event) {
+                // scroll right control
+                event.gesture.preventDefault();
+
+                if (event.gesture.touches.length == 2) {
+                    $.ajax({
+                        url: "Handlers/OfficeRemoteProxy.ashx",
+                        data: {
+                            type: "Hscroll",
+                            /*touches: event.touches.length,*/
+                            direction: event.gesture.direction,
+                            offset_x: event.gesture.distance * 3,
+                            offset_y: 0
+                        }
+                    });
+                }
+            });
+
+            Hammer(tm, { drag_max_touches: 3 }).on('dragstart', function (event) {
+                event.gesture.preventDefault();
+                var laserState = $("#spLaser").attr("state");
+                if (event.gesture.touches.length == 1) {
+                    if (laserState == "on") {
+                        $.ajax({
+                            url: "Handlers/OfficeRemoteProxy.ashx",
+                            data: {
+                                type: "laseron",
+                                offset_x: event.gesture.distance * 3,
+                                offset_y: 0
+                            }
+                        });
+                    }
+                }
+            });
+
+            Hammer(tm, { drag_max_touches: 3 }).on('dragend', function (event) {
+                event.gesture.preventDefault();
+                if (event.gesture.touches.length == 1) {
+                    prevDistanceX = 0;
+                    prevDistanceY = 0;
+
+                    var laserState = $("#spLaser").attr("state");
+                    if (laserState == "on") {
+                        $.ajax({
+                            url: "Handlers/OfficeRemoteProxy.ashx",
+                            data: {
+                                type: "laseroff",
+                                offset_x: event.gesture.distance * 3,
+                                offset_y: 0
+                            }
+                        });
+                    }
+                }
+
+                //if (event.gesture.touches.length == 3 && (event.gesture.direction == "up" || event.gesture.direction == "down"))
+                //{
+
+                //}
+            });
+
+            Hammer(tm).on('tap', function (event) {
+                event.gesture.preventDefault();
+                
+                $.ajax({
+                    url: "Handlers/OfficeRemoteProxy.ashx",
+                    data: {
+                        type: event.type,
+                        touches: 1,
+                        direction: event.gesture.direction,
+                        offset_x: 0,
+                        offset_y: 0
+                    }
+                });
+            });
+
+            Hammer(tm).on('hold', function (event) {
+                event.gesture.preventDefault();
+
+                $.ajax({
+                    url: "Handlers/OfficeRemoteProxy.ashx",
+                    data: {
+                        type: event.type,
+                        direction: event.gesture.direction,
+                        offset_x: 0,
+                        offset_y: 0
+                    }
+                });
+            });
+
+            Hammer(bk).on('tap', function (event) {
+                event.stopImmediatePropagation();
+                event.gesture.preventDefault();
+
+                $.ajax({
+                    url: "Handlers/OfficeRemoteProxy.ashx",
+                    data: {
+                        type: "swipe",
+                        direction: "left",
+                        offset_x: 0,
+                        offset_y: 0
+                    }
+                });
+            });
+
+            Hammer(fw).on('tap', function (event) {
+                event.stopImmediatePropagation();
+                event.gesture.preventDefault();
+
+                $.ajax({
+                    url: "Handlers/OfficeRemoteProxy.ashx",
+                    data: {
+                        type: "swipe",
+                        direction: "right",
+                        offset_x: 0,
+                        offset_y: 0
+                    }
+                });
+            });
+
+            Hammer(rb).on('tap', function (event) {
+                event.stopImmediatePropagation();
+                event.gesture.preventDefault();
+
+                $.ajax({
+                    url: "Handlers/OfficeRemoteProxy.ashx",
+                    data: {
+                        type: "tap",
+                        touches: 2,
+                        offset_x: 0,
+                        offset_y: 0
+                    }
+                });
+            });
+
+        }(jQuery));
+    </script>
+</body>
+</html>

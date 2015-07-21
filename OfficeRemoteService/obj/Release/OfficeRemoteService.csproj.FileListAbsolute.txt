@@ -1,0 +1,9 @@
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\bin\Release\OfficeRemoteService.exe.config
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\bin\Release\OfficeRemoteService.exe
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\bin\Release\OfficeRemoteService.pdb
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\obj\Release\OfficeRemoteService.csprojResolveAssemblyReference.cache
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\obj\Release\OfficeRemoteService.MainForm.resources
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\obj\Release\OfficeRemoteService.Properties.Resources.resources
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\obj\Release\OfficeRemoteService.csproj.GenerateResource.Cache
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\obj\Release\OfficeRemoteService.exe
+C:\Users\chxiang\Documents\GitHub\OfficeRemoteWeb\OfficeRemoteService\obj\Release\OfficeRemoteService.pdb

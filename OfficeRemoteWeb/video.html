@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Video Capture</title>
+    <link rel="stylesheet" href="Content/jquery.mobile-1.4.0.css" />
+
+    <!-- jQuery and jQuery Mobile -->
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/jquery.mobile-1.4.0.min.js"></script>
+
+    <style>
+        .fileinput-button {
+            position: relative;
+            overflow: hidden;
+            float: left;
+            margin-right: 4px;
+        }
+
+        .fileinput-button input {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            transform: translate(-300px, 0) scale(4);
+            font-size: 23px;
+            direction: ltr;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!--<video id="video" autoplay=""></video>-->
+    <span class="ui-btn ui-icon-plus ui-btn-icon-left ui-corner-all fileinput-button">
+    <span>Photo</span>
+    <input id="image-picker" type="file" accept="image/*" data-role="none"/>
+    </span>
+    <div id="imgstore"></div>
+    <script>
+        //var video = document.getElementById("video");
+        //navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
+        //if (navigator.getUserMedia) //
+        //{
+        //    if (navigator.webkitURL)//
+        //    {
+        //        navigator.getUserMedia({ video: true, audio: true }, function (stream) {
+        //            video.src = window.webkitURL.createObjectURL(stream);
+        //        }, function (error) { alert(error); });
+        //    }
+        //    else //
+        //    {
+        //        navigator.getUserMedia({ video: true, audio: true }, function (stream) {
+        //            video.src = window.webkitURL.createObjectURL(stream);
+        //        }, function (error) { alert(error); });
+        //    }
+        //}
+
+        $("#image-picker").change(function (event) {
+            var files = event.target.files;
+            if (files.length > 0) {
+                // Do something with files[0]
+                var filename = event.target.files[0];
+                var fr = new FileReader();
+                fr.onload = function imageHandler(e) {
+                    var store = document.getElementById('imgstore');
+                    store.innerHTML = '<img src="' + e.target.result + '">';
+                };
+                fr.readAsDataURL(filename);
+                
+            }
+        });
+    </script>
+</body>
+</html>
