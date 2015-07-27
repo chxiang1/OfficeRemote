@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <button width="1" height="50" alignment="left" title="Previous" id="Cdn-Eg-CfF">
+                            <connections>
+                                <action selector="previousButtonClicked:" destination="AgC-eL-Hgc" id="ns0-Zs-TUN"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="50" alignment="left" title="Next" id="zYZ-2v-SLh">
+                            <connections>
+                                <action selector="nextButtonClicked" destination="AgC-eL-Hgc" id="1gk-Ig-NI2"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="50" alignment="left" title="Play/Stop" id="3Be-DT-l54">
+                            <connections>
+                                <action selector="toggleButtonClicked" destination="AgC-eL-Hgc" id="c2Y-AJ-2D2"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="nextButton" destination="zYZ-2v-SLh" id="xgT-ia-jMD"/>
+                        <outlet property="playStopButton" destination="3Be-DT-l54" id="T9Z-IO-6iF"/>
+                        <outlet property="previousButton" destination="Cdn-Eg-CfF" id="D5b-xk-z0C"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
