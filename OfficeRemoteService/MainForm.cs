@@ -59,7 +59,8 @@ namespace OfficeRemoteService
                         if ("/Handlers/OfficeRemoteProxy.ashx" == relPath)
                         {
                             Handler.HandleRequest(context);
-                                
+
+                            WacPPTHandler.HandleRequest(context);
                         }
 
                         if (File.Exists(dir + relPath))
@@ -200,6 +201,7 @@ namespace OfficeRemoteService
             worker = new Worker();
             thread = new Thread(new ParameterizedThreadStart(worker.DoWork));
             thread.IsBackground = true;
+            thread.SetApartmentState(ApartmentState.STA);
             thread.Start(rtbLog);
 
             btnRegister.Enabled = false;
