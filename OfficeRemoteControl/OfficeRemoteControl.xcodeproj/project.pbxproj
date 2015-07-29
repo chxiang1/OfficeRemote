@@ -1,0 +1,732 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F3939011B0828AE00798A3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3939001B0828AE00798A3C /* main.m */; };
+		8F3939041B0828AE00798A3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3939031B0828AE00798A3C /* AppDelegate.m */; };
+		8F3939071B0828AE00798A3C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3939061B0828AE00798A3C /* SettingsViewController.m */; };
+		8F39390A1B0828AE00798A3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F3939081B0828AE00798A3C /* Main.storyboard */; };
+		8F39390C1B0828AE00798A3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F39390B1B0828AE00798A3C /* Images.xcassets */; };
+		8F39390F1B0828AE00798A3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F39390D1B0828AE00798A3C /* LaunchScreen.xib */; };
+		8F39391B1B0828AE00798A3C /* OfficeRemoteControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F39391A1B0828AE00798A3C /* OfficeRemoteControlTests.m */; };
+		8F39392E1B08776500798A3C /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F39392D1B08776500798A3C /* InterfaceController.m */; };
+		8F3939301B08776500798A3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F39392F1B08776500798A3C /* Images.xcassets */; };
+		8F3939341B08776500798A3C /* OfficeRemoteControl WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 8F3939331B08776500798A3C /* OfficeRemoteControl WatchKit App.app */; };
+		8F39393C1B08776500798A3C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F39393A1B08776500798A3C /* Interface.storyboard */; };
+		8F39393E1B08776500798A3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F39393D1B08776500798A3C /* Images.xcassets */; };
+		8F3939411B08776500798A3C /* OfficeRemoteControl WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F3939281B08776500798A3C /* OfficeRemoteControl WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8F62B8BB1B135FCD0084B2CF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F62B8BA1B135FCD0084B2CF /* MainViewController.m */; };
+		8FF8DC9B1B0A30EA000E007B /* OfficeRemoteControl.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 8FF8DC9A1B0A30EA000E007B /* OfficeRemoteControl.entitlements */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F3939151B0828AE00798A3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F3938F31B0828AD00798A3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F3938FA1B0828AD00798A3C;
+			remoteInfo = OfficeRemoteControl;
+		};
+		8F3939351B08776500798A3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F3938F31B0828AD00798A3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F3939321B08776500798A3C;
+			remoteInfo = "OfficeRemoteControl WatchKit App";
+		};
+		8F39393F1B08776500798A3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F3938F31B0828AD00798A3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F3939271B08776500798A3C;
+			remoteInfo = "OfficeRemoteControl WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8F3939481B08776500798A3C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8F3939411B08776500798A3C /* OfficeRemoteControl WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8F3938FB1B0828AE00798A3C /* OfficeRemoteControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfficeRemoteControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F3938FF1B0828AE00798A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F3939001B0828AE00798A3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8F3939021B0828AE00798A3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8F3939031B0828AE00798A3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8F3939051B0828AE00798A3C /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		8F3939061B0828AE00798A3C /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		8F3939091B0828AE00798A3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F39390B1B0828AE00798A3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8F39390E1B0828AE00798A3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8F3939141B0828AE00798A3C /* OfficeRemoteControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfficeRemoteControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F3939191B0828AE00798A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F39391A1B0828AE00798A3C /* OfficeRemoteControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OfficeRemoteControlTests.m; sourceTree = "<group>"; };
+		8F3939281B08776500798A3C /* OfficeRemoteControl WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OfficeRemoteControl WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F39392B1B08776500798A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F39392C1B08776500798A3C /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		8F39392D1B08776500798A3C /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		8F39392F1B08776500798A3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8F3939331B08776500798A3C /* OfficeRemoteControl WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OfficeRemoteControl WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F3939391B08776500798A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F39393B1B08776500798A3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		8F39393D1B08776500798A3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8F62B8B91B135FCD0084B2CF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		8F62B8BA1B135FCD0084B2CF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		8FF8DC9A1B0A30EA000E007B /* OfficeRemoteControl.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = OfficeRemoteControl.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F3938F81B0828AD00798A3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F3939111B0828AE00798A3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F3939251B08776500798A3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F3938F21B0828AD00798A3C = {
+			isa = PBXGroup;
+			children = (
+				8F3938FD1B0828AE00798A3C /* OfficeRemoteControl */,
+				8F3939171B0828AE00798A3C /* OfficeRemoteControlTests */,
+				8F3939291B08776500798A3C /* OfficeRemoteControl WatchKit Extension */,
+				8F3939371B08776500798A3C /* OfficeRemoteControl WatchKit App */,
+				8F3938FC1B0828AE00798A3C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F3938FC1B0828AE00798A3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F3938FB1B0828AE00798A3C /* OfficeRemoteControl.app */,
+				8F3939141B0828AE00798A3C /* OfficeRemoteControlTests.xctest */,
+				8F3939281B08776500798A3C /* OfficeRemoteControl WatchKit Extension.appex */,
+				8F3939331B08776500798A3C /* OfficeRemoteControl WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F3938FD1B0828AE00798A3C /* OfficeRemoteControl */ = {
+			isa = PBXGroup;
+			children = (
+				8FF8DC9A1B0A30EA000E007B /* OfficeRemoteControl.entitlements */,
+				8F3939021B0828AE00798A3C /* AppDelegate.h */,
+				8F3939031B0828AE00798A3C /* AppDelegate.m */,
+				8F62B8B91B135FCD0084B2CF /* MainViewController.h */,
+				8F62B8BA1B135FCD0084B2CF /* MainViewController.m */,
+				8F3939051B0828AE00798A3C /* SettingsViewController.h */,
+				8F3939061B0828AE00798A3C /* SettingsViewController.m */,
+				8F3939081B0828AE00798A3C /* Main.storyboard */,
+				8F39390B1B0828AE00798A3C /* Images.xcassets */,
+				8F39390D1B0828AE00798A3C /* LaunchScreen.xib */,
+				8F3938FE1B0828AE00798A3C /* Supporting Files */,
+			);
+			path = OfficeRemoteControl;
+			sourceTree = "<group>";
+		};
+		8F3938FE1B0828AE00798A3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F3938FF1B0828AE00798A3C /* Info.plist */,
+				8F3939001B0828AE00798A3C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8F3939171B0828AE00798A3C /* OfficeRemoteControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F39391A1B0828AE00798A3C /* OfficeRemoteControlTests.m */,
+				8F3939181B0828AE00798A3C /* Supporting Files */,
+			);
+			path = OfficeRemoteControlTests;
+			sourceTree = "<group>";
+		};
+		8F3939181B0828AE00798A3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F3939191B0828AE00798A3C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8F3939291B08776500798A3C /* OfficeRemoteControl WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8F39392C1B08776500798A3C /* InterfaceController.h */,
+				8F39392D1B08776500798A3C /* InterfaceController.m */,
+				8F39392F1B08776500798A3C /* Images.xcassets */,
+				8F39392A1B08776500798A3C /* Supporting Files */,
+			);
+			path = "OfficeRemoteControl WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		8F39392A1B08776500798A3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F39392B1B08776500798A3C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8F3939371B08776500798A3C /* OfficeRemoteControl WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				8F39393A1B08776500798A3C /* Interface.storyboard */,
+				8F39393D1B08776500798A3C /* Images.xcassets */,
+				8F3939381B08776500798A3C /* Supporting Files */,
+			);
+			path = "OfficeRemoteControl WatchKit App";
+			sourceTree = "<group>";
+		};
+		8F3939381B08776500798A3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F3939391B08776500798A3C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F3938FA1B0828AD00798A3C /* OfficeRemoteControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F39391E1B0828AE00798A3C /* Build configuration list for PBXNativeTarget "OfficeRemoteControl" */;
+			buildPhases = (
+				8F3938F71B0828AD00798A3C /* Sources */,
+				8F3938F81B0828AD00798A3C /* Frameworks */,
+				8F3938F91B0828AD00798A3C /* Resources */,
+				8F3939481B08776500798A3C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F3939401B08776500798A3C /* PBXTargetDependency */,
+			);
+			name = OfficeRemoteControl;
+			productName = OfficeRemoteControl;
+			productReference = 8F3938FB1B0828AE00798A3C /* OfficeRemoteControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F3939131B0828AE00798A3C /* OfficeRemoteControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F3939211B0828AE00798A3C /* Build configuration list for PBXNativeTarget "OfficeRemoteControlTests" */;
+			buildPhases = (
+				8F3939101B0828AE00798A3C /* Sources */,
+				8F3939111B0828AE00798A3C /* Frameworks */,
+				8F3939121B0828AE00798A3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F3939161B0828AE00798A3C /* PBXTargetDependency */,
+			);
+			name = OfficeRemoteControlTests;
+			productName = OfficeRemoteControlTests;
+			productReference = 8F3939141B0828AE00798A3C /* OfficeRemoteControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F3939271B08776500798A3C /* OfficeRemoteControl WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F3939451B08776500798A3C /* Build configuration list for PBXNativeTarget "OfficeRemoteControl WatchKit Extension" */;
+			buildPhases = (
+				8F3939241B08776500798A3C /* Sources */,
+				8F3939251B08776500798A3C /* Frameworks */,
+				8F3939261B08776500798A3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F3939361B08776500798A3C /* PBXTargetDependency */,
+			);
+			name = "OfficeRemoteControl WatchKit Extension";
+			productName = "OfficeRemoteControl WatchKit Extension";
+			productReference = 8F3939281B08776500798A3C /* OfficeRemoteControl WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		8F3939321B08776500798A3C /* OfficeRemoteControl WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F3939421B08776500798A3C /* Build configuration list for PBXNativeTarget "OfficeRemoteControl WatchKit App" */;
+			buildPhases = (
+				8F3939311B08776500798A3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OfficeRemoteControl WatchKit App";
+			productName = "OfficeRemoteControl WatchKit App";
+			productReference = 8F3939331B08776500798A3C /* OfficeRemoteControl WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F3938F31B0828AD00798A3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Chaos Xiang";
+				TargetAttributes = {
+					8F3938FA1B0828AD00798A3C = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = S9SRRYER9Y;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					8F3939131B0828AE00798A3C = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 8F3938FA1B0828AD00798A3C;
+					};
+					8F3939271B08776500798A3C = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = S9SRRYER9Y;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					8F3939321B08776500798A3C = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = S9SRRYER9Y;
+					};
+				};
+			};
+			buildConfigurationList = 8F3938F61B0828AD00798A3C /* Build configuration list for PBXProject "OfficeRemoteControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F3938F21B0828AD00798A3C;
+			productRefGroup = 8F3938FC1B0828AE00798A3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F3938FA1B0828AD00798A3C /* OfficeRemoteControl */,
+				8F3939131B0828AE00798A3C /* OfficeRemoteControlTests */,
+				8F3939271B08776500798A3C /* OfficeRemoteControl WatchKit Extension */,
+				8F3939321B08776500798A3C /* OfficeRemoteControl WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F3938F91B0828AD00798A3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F39390A1B0828AE00798A3C /* Main.storyboard in Resources */,
+				8F39390F1B0828AE00798A3C /* LaunchScreen.xib in Resources */,
+				8FF8DC9B1B0A30EA000E007B /* OfficeRemoteControl.entitlements in Resources */,
+				8F39390C1B0828AE00798A3C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F3939121B0828AE00798A3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F3939261B08776500798A3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F3939341B08776500798A3C /* OfficeRemoteControl WatchKit App.app in Resources */,
+				8F3939301B08776500798A3C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F3939311B08776500798A3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F39393C1B08776500798A3C /* Interface.storyboard in Resources */,
+				8F39393E1B08776500798A3C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F3938F71B0828AD00798A3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F3939071B0828AE00798A3C /* SettingsViewController.m in Sources */,
+				8F3939041B0828AE00798A3C /* AppDelegate.m in Sources */,
+				8F3939011B0828AE00798A3C /* main.m in Sources */,
+				8F62B8BB1B135FCD0084B2CF /* MainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F3939101B0828AE00798A3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F39391B1B0828AE00798A3C /* OfficeRemoteControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F3939241B08776500798A3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F39392E1B08776500798A3C /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F3939161B0828AE00798A3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F3938FA1B0828AD00798A3C /* OfficeRemoteControl */;
+			targetProxy = 8F3939151B0828AE00798A3C /* PBXContainerItemProxy */;
+		};
+		8F3939361B08776500798A3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F3939321B08776500798A3C /* OfficeRemoteControl WatchKit App */;
+			targetProxy = 8F3939351B08776500798A3C /* PBXContainerItemProxy */;
+		};
+		8F3939401B08776500798A3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F3939271B08776500798A3C /* OfficeRemoteControl WatchKit Extension */;
+			targetProxy = 8F39393F1B08776500798A3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F3939081B0828AE00798A3C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F3939091B0828AE00798A3C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8F39390D1B0828AE00798A3C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F39390E1B0828AE00798A3C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		8F39393A1B08776500798A3C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F39393B1B08776500798A3C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F39391C1B0828AE00798A3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F39391D1B0828AE00798A3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F39391F1B0828AE00798A3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OfficeRemoteControl/OfficeRemoteControl.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = OfficeRemoteControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		8F3939201B0828AE00798A3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OfficeRemoteControl/OfficeRemoteControl.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = OfficeRemoteControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		8F3939221B0828AE00798A3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OfficeRemoteControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfficeRemoteControl.app/OfficeRemoteControl";
+			};
+			name = Debug;
+		};
+		8F3939231B0828AE00798A3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OfficeRemoteControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfficeRemoteControl.app/OfficeRemoteControl";
+			};
+			name = Release;
+		};
+		8F3939431B08776500798A3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = OfficeRemoteControl_WatchKit_Extension;
+				INFOPLIST_FILE = "OfficeRemoteControl WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		8F3939441B08776500798A3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = OfficeRemoteControl_WatchKit_Extension;
+				INFOPLIST_FILE = "OfficeRemoteControl WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		8F3939461B08776500798A3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "OfficeRemoteControl WatchKit Extension/OfficeRemoteControl WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OfficeRemoteControl WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8F3939471B08776500798A3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "OfficeRemoteControl WatchKit Extension/OfficeRemoteControl WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "OfficeRemoteControl WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F3938F61B0828AD00798A3C /* Build configuration list for PBXProject "OfficeRemoteControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F39391C1B0828AE00798A3C /* Debug */,
+				8F39391D1B0828AE00798A3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F39391E1B0828AE00798A3C /* Build configuration list for PBXNativeTarget "OfficeRemoteControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F39391F1B0828AE00798A3C /* Debug */,
+				8F3939201B0828AE00798A3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F3939211B0828AE00798A3C /* Build configuration list for PBXNativeTarget "OfficeRemoteControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F3939221B0828AE00798A3C /* Debug */,
+				8F3939231B0828AE00798A3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F3939421B08776500798A3C /* Build configuration list for PBXNativeTarget "OfficeRemoteControl WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F3939431B08776500798A3C /* Debug */,
+				8F3939441B08776500798A3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F3939451B08776500798A3C /* Build configuration list for PBXNativeTarget "OfficeRemoteControl WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F3939461B08776500798A3C /* Debug */,
+				8F3939471B08776500798A3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F3938F31B0828AD00798A3C /* Project object */;
+}
