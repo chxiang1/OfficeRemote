@@ -107,7 +107,16 @@ namespace OfficeRemoteService
             foreach (InternetExplorer explorer in windows)
             {
                 IntPtr handle = (IntPtr)explorer.HWND;
-                mshtml.IHTMLDocument2 doc = explorer.Document;
+                mshtml.IHTMLDocument2 doc;
+
+                try
+                {
+                    doc = explorer.Document;
+                }
+                catch (InvalidCastException)
+                {
+                    continue;
+                }
 
                 if (doc.frames != null)
                 {
